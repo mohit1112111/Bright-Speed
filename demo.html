@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #game-container {
+            margin-top: 50px;
+        }
+
+        #congrats-gif {
+            display: none;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="game-container">
+        <h1>Number Guessing Game</h1>
+        <p>Guess the number between 1 and 100:</p>
+        <input type="number" id="userGuessInput">
+        <button id="guessButton">Guess</button><br>
+        Attempts - <span id="attempt"></span><br>
+        Number Guessed - <span id="guess"></span>
+    </div>
+    <img src="ba116458e5d94720b504082ce925e777.gif" id="congrats-gif" alt="Congratulations GIF">
+    <p id="feedback"></p>
+    <div id="playAgain"></div>
+    
+    <script src="demo.js"></script>
+</body>
+
+</html>

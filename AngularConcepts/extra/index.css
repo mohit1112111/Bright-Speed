@@ -1,0 +1,116 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141414;
+    padding: 20px;
+    color: #ffffff;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .search-box button {
+    padding: 8px 16px;
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      margin-top: 20px;
+    }
+  
+    .search-box {
+      margin-top: 20px;
+    }
+  }
+
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive styles for hamburger menu */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      color: #ffffff;
+      font-size: 24px;
+    }
+  
+    .nav-links {
+      display: none;
+      position: relative;
+    }
+  
+    .nav-links.active {
+      display: block;
+    }
+  
+    .search-box {
+      margin-top: 20px;
+    }
+  }
+  
