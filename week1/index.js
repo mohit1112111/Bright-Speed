@@ -105,9 +105,9 @@ console.log("Welcome the learning of js!")
 
 
 let obj = {
-    name:"Mohit",
-    love:"shivani",
-    bond:`Mohit and Shivani will you love each other forever!`,
+    name:"M",
+    love:"S",
+    bond:`M and S will you love each other forever!`,
     conclusion:"Yes",
     func:function(){
         console.log(this.name + " and " + this.love + " will you love each other forever ");
