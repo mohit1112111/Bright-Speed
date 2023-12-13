@@ -236,3 +236,76 @@ const calculate = () => {
 //     return x%2==0;
 // })
 // console.log(res);
+
+//map method task
+// let productList =[
+//   {
+//     mobile:"oppo",
+//     price:25000
+//   },
+//   {
+//     laptop:"dell",
+//     price:95000
+//   },
+//   {
+//     bat:"lather",
+//     price:5000
+//   }
+// ]
+
+//   let res = productList.map((ele)=>{
+//     ele.price = ele.price - 5;
+//     return ele;
+//   })
+//   console.log(res);
+
+// array reduced method 
+//  let arr = [1,2,3,45,6];
+//  let res = arr.reduce((sum,ele)=>{
+//   console.log("sum is " + sum + " and element is " + ele );
+
+//        return sum+ele;
+//  },0)
+// console.log(res);
+
+// let productList =[
+//   {
+//     name:"oppo",
+//     price:25000
+//   },
+//   {
+//     name:"dell",
+//     price:95000
+//   },
+//   {
+//     name:"lather",
+//     price:5000
+//   }
+// ]
+
+// let res = productList.reduce((sum,ele)=>{
+//   return sum+ele.price;
+// },0)
+// console.log(res);
+
+// string in js
+let str = "hello mohit how are you";
+let arr = str.split(" ");
+// for (var i = 0; i < arr.length; i++) {
+//   arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+
+// }
+
+
+// arr.forEach((ele,ind)=>{
+//   ele = ele.charAt(0).toUpperCase() + ele.slice(1);
+//   console.log(ele);
+// })
+// console.log(arr);
+
+let res = arr.map((element)=>{
+  return element.charAt(0).toUpperCase() + element.slice(1);
+})
+// console.log(res);
+const str2 = res.join(" ");
+console.log(str2);
