@@ -104,18 +104,31 @@ console.log("Welcome the learning of js!")
 
 
 
-let obj = {
-    name:"Mohit",
-    love:"shivani",
-    bond:`Mohit and Shivani will you love each other forever!`,
-    conclusion:"Yes",
-    func:function(){
-        console.log(this.name + " and " + this.love + " will you love each other forever ");
-    },
+// let obj = {
+//     name:"Mohit",
+//     love:"shivani",
+//     bond:`Mohit and Shivani will you love each other forever!`,
+//     conclusion:"Yes",
+//     func:function(){
+//         console.log(this.name + " and " + this.love + " will you love each other forever ");
+//     },
    
-};
+// };
 
-for(let key in obj){
-    console.log(obj[key]);
-}
+// for(let key in obj){
+//     console.log(obj[key]);
+// }
+
+
+// EXAMPLES
+//  let obj = {
+//     name :"Mohit",
+//     city:"Muzaffarnagar"
+//  };
+
+// for(let key in obj){
+//     console.log(obj[key]);
+// }
+
+
 
