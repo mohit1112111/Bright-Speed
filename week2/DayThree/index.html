@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-init="myVar='Mohit Kumar'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular learning - DayThree</title>
+
+    <style>
+        .para{
+            color: red;
+        }
+        .para2{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="directiveCtrl"  ng-init="myVar='Shivani Kumar'">
+
+        <h2 ng-show="isShow">Hello Mohit in THIRD DAY of angular learining!</h2>
+        <h2 ng-hide="isHide">Hello Mohit in THIRD DAY of angular learining!</h2>
+        <!-- using variables by ng-init -->
+        {{myVar}}
+        <!-- hide show element using ng-if -->
+        <h2 ng-if="displayIf">I am hiding and show using ng-if</h2>
+
+        <!-- ng-class directives -->
+        <p ng-class="{para:isRed}">This is the ng-class directive example!</p>
+        <!-- ng-source diective -->
+        <!-- <img ng-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEBqYEUHs9SPync2bo8AmdYjzW5WYicOWF8lreCXnMcQ&s" alt="..."> -->
+        <img ng-src={{imageUrl}} alt="..."><br>
+        <button ng-click="showImage()">click here to see image</button>
+
+        <!-- ng-repate directive -->
+        <li ng-repeat="ele in arr">{{ele}}</li>
+        <!-- printing objects -->
+        <li ng-repeat="ele in obj1">{{ele}}</li>
+        <!-- when arr contains duplicates  -->
+        <li ng-repeat="ele in obj">{{ele.num}}</li>
+
+        <!-- filters -->
+        <p>Your name is {{name}}</p>
+        <!-- To upperCASE -->
+        <p>Your name is {{name | uppercase}}</p>
+        <p>Your name is {{name | lowercase}}</p>
+
+        <!-- order by -->
+        <ul>
+            <li ng-repeat="ele in names | orderBy : 'country'">{{ele.country}}</li>
+        </ul> 
+
+        <!-- currency -->
+        <p>{{58 | currency }}</p>
+        <p>{{58 | currency : "USD" }}</p>
+        <p>{{58 | currency : "USD" :3}}</p>
+
+        <!-- filter  -->
+        <ul>
+            <li ng-repeat="ele in names1 | filter : 'a' ">{{ele}}</li>
+        </ul>
+        <ul>
+            <li ng-repeat="ele in names1 | filter : 'ka' ">{{ele}}</li>
+        </ul>
+        <!-- sorting of an array using user input -->
+        <h3>sorting of an array using user input</h3>
+        <table border="1" width="100%">
+            <tr>
+                <th  ng-click="getData('name')">Name</th>
+                <th  ng-click="getData('country')">Country</th>
+            </tr>
+            <tr ng-repeat="ele in names2 | orderBy:myOrderBy">
+                <td>{{ele.name}}</td>
+                <td>{{ele.country}}</td>
+            </tr>
+        </table>
+        <!-- one time data binding -->
+        <p>This is one time data binding : {{::message}}</p>{{message}}
+        <p>This is one time data binding : {{message}}</p>
+        <button ng-click="changeData()">click to change</button>
+
+        <!-- changing the text colour  -->
+        <h3 ng-click="changeColor()" ng-class="{para2:giveColor}">click me to change my color</h3>
+
+
+        <!-- Toggles the button -->
+        <button ng-click="hideLogin()" ng-show="isTrueLogin">Sign Up</button>
+        <button ng-click="hideSignUp()" ng-show="isTrueSignUp">Login</button>
+        <br>
+        <br>
+        <!-- Taking input from user and store in object -->
+        <input type="text" ng-model="firstName" placeholder="Enter first name"><br>
+        <input type="text" ng-model="lastName" placeholder="Enter last name"><br>
+        <input type="text" ng-model="gmail" placeholder="Enter your mail"><br>
+        <input type="password" ng-model="pass" placeholder="Enter your password"><br><br>
+        <button ng-click="getUserData()">Click to get userData</button>
+
+        <h2>Login and sign up page </h2>
+        
+    </div>
+    <!-- using variables by ng-init -->
+    <br>
+    {{myVar}}
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

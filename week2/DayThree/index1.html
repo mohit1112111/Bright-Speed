@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up/Login Form</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn-signup,
+        .btn-login {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn-signup:hover,
+        .btn-login:hover {
+            background-color: #2980b9;
+        }
+        .btnContainer{
+            display: flex;
+        
+        }
+        .btnContainer button{
+         
+            width: 150px;
+            margin: 5px 12px;
+        }
+    </style>
+</head>
+
+<body ng-controller="index1Ctrl">
+    <div class="btnContainer">
+
+        <button ng-click="showSignUp()" class="btn-signup">Wants to Sign Up</button><br><br>
+        <button ng-click="showLogin()" class="btn-login">Wants Login</button>
+    </div>
+    <div class="container">
+
+        <div class="form-container" ng-show="isDisplaySignUp">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="First Name" class="input-field" ng-model="firstName"><br>
+                <input type="text" placeholder="Last Name" class="input-field" ng-model="lastName"><br>
+                <input type="email" placeholder="Email" class="input-field" ng-model="gmail"><br>
+                <input type="password" placeholder="Password" class="input-field" ng-model="pass"><br>
+                <button ng-click="getUserData()" class="btn-signup">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="form-container" ng-show="isDisplayLogin">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" class="input-field" ng-model="loginGamil"><br>
+                <input type="password" placeholder="Password" class="input-field" ng-model="loginPass"><br>
+                <button ng-click="fetchData()" class="btn-login">Login</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="index1.js"></script>
+</body>
+
+</html>

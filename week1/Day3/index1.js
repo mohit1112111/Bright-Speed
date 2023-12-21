@@ -104,6 +104,7 @@ console.log("Welcome the learning of js!")
 
 
 
+<<<<<<< HEAD:week1/Day3/index1.js
 // let obj = {
 //     name:"Mohit",
 //     love:"shivani",
@@ -112,6 +113,16 @@ console.log("Welcome the learning of js!")
 //     func:function(){
 //         console.log(this.name + " and " + this.love + " will you love each other forever ");
 //     },
+=======
+let obj = {
+    name:"M",
+    love:"S",
+    bond:`M and S will you love each other forever!`,
+    conclusion:"Yes",
+    func:function(){
+        console.log(this.name + " and " + this.love + " will you love each other forever ");
+    },
+>>>>>>> cf37e4081c28885fb54b4e356306b58124dd66d1:week1/index.js
    
 // };
 

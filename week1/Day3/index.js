@@ -82,36 +82,36 @@
 
 
 //  SIMPLE CALCULATER
-const calculate = () => {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    const operation = document.getElementById('operation').value;
-    let result;
+// const calculate = () => {
+//     const num1 = parseFloat(document.getElementById('num1').value);
+//     const num2 = parseFloat(document.getElementById('num2').value);
+//     const operation = document.getElementById('operation').value;
+//     let result;
   
-    switch (operation) {
-      case 'add':
-        result = num1 + num2;
-        break;
-      case 'subtract':
-        result = num1 - num2;
-        break;
-      case 'multiply':
-        result = num1 * num2;
-        break;
-      case 'divide':
-        if (num2 === 0) {
-          result = "Cannot divide by zero";
-        } else {
-          result = num1 / num2;
-        }
-        break;
-      default:
-        result = "Invalid operation";
-        break;
-    }
+//     switch (operation) {
+//       case 'add':
+//         result = num1 + num2;
+//         break;
+//       case 'subtract':
+//         result = num1 - num2;
+//         break;
+//       case 'multiply':
+//         result = num1 * num2;
+//         break;
+//       case 'divide':
+//         if (num2 === 0) {
+//           result = "Cannot divide by zero";
+//         } else {
+//           result = num1 / num2;
+//         }
+//         break;
+//       default:
+//         result = "Invalid operation";
+//         break;
+//     }
   
-    document.getElementById('result').innerText = `Result: ${result}`;
-  };
+//     document.getElementById('result').innerText = `Result: ${result}`;
+//   };
 
   
 
@@ -289,8 +289,8 @@ const calculate = () => {
 // console.log(res);
 
 // string in js
-let str = "hello mohit how are you";
-let arr = str.split(" ");
+// let str = "hello mohit how are you";
+// let arr = str.split(" ");
 // for (var i = 0; i < arr.length; i++) {
 //   arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
 
@@ -303,9 +303,98 @@ let arr = str.split(" ");
 // })
 // console.log(arr);
 
-let res = arr.map((element)=>{
-  return element.charAt(0).toUpperCase() + element.slice(1);
-})
-// console.log(res);
-const str2 = res.join(" ");
-console.log(str2);
+// let res = arr.map((element)=>{
+//   return element.charAt(0).toUpperCase() + element.slice(1);
+// })
+// // console.log(res);
+// const str2 = res.join(" ");
+// console.log(str2);
+
+
+// let obj ={
+//   1:"1df",
+//   2:"2s"
+// }
+// for(let i of obj){
+//   console.log(i);
+// }
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(2, 2, "Lemon", "Kiwi");
+// console.log(fruits)
+
+
+// let id = setTimeout(()=>{
+//   console.log("Heloo Mohit")
+
+// },4000)
+// let id = setInterval(()=>{
+//   console.log("Heloo Mohit");
+// },1000)
+// console.log(id)
+// // clearTimeout(id);
+// clearInterval(id)
+
+
+// function printText(){
+//   console.log('Hello Mohit')
+// }
+// setInterval(()=>{
+//   printText()
+// },1000)
+
+
+// let form = document.getElementById("userForm");
+// form.addEventListener('submit',(e)=>{
+//   e.preventDefault();
+//   let firstName = document.getElementById('firstName').value;
+//   let secondName = document.getElementById('lastName').value;
+//   console.log(firstName);
+//   console.log(secondName);
+// })
+
+
+// function func(){
+//   var a=34;
+//   let b=2;
+//   {
+//     var c=3;
+//     let d =66;
+//     console.log(a);
+//     console.log(b);
+//   }
+//   console.log(d);
+//   console.log(c);
+// }
+// func()
+
+
+// let p = new Promise((resolve,reject)=>{
+//   // resolve("hello Mohit");
+//   reject('e')
+// })
+// p.then((val)=>{
+//   console.log(val);
+// }).catch((error)=>{
+//   console.log(error)
+// })
+
+
+
+
+
+
+
+
+
+// **********************Get the values From***********************************
+// let userForm = document.getElementById('userForm');
+// userForm.addEventListener('submit',(e)=>{
+//   e.preventDefault();
+//   let userName =  document.getElementById('firstName').value;
+//   let pass = document.getElementById('pass').value;
+//   console.log(userName);
+//   console.log(pass);
+// })
+
+// *******************************************************************************

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to learning Angular.js</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h2>Welcome Mohit How are you! - Please learn angular.js</h2>
+    <p>{{5+5}}</p>
+    <p>{{4>5}}</p>
+    <p>{{45%4}}</p>
+    <p>{{45/3}}</p>
+
+    <!-- we can also write above as -->
+    <p ng-bind="{{4>5}}"></p>
+    <!-- taking variable in angular.js -->
+
+    <!-- Controller concepts -->
+    <div ng-controller="userCtrl">{{name}}</div>
+
+    <!-- if you want to access controller properties using this keyword then you can as -->
+    <div ng-controller="userCtrl as user">
+        <p>{{user.pagal}}</p>
+        <p>The sum of the numbers is : {{user.sum}}</p>
+        <p>{{user.printName()}}</p>
+        <p>{{user.add}}</p>
+        <!-- Nested controllers -->
+        <!-- we can't atteched multpile controller on 
+        a single container but we can attached nested controllers -->
+        <div ng-controller="studentCtrl as student">
+            <p>The name of the student is {{student.name}}</p>
+            <ul>
+                <li ng-repeat="ele in student.nums">element is{{ele}}</li>
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <!-- ng module practice -->
+    <br>
+    <h2>ng module practice</h2>
+    <div ng-controller="ngmoduleCtrl">
+        <input type="text" name="" id="first" ng-model="firstName" placeholder="Enter first name">
+        <input type="text" name="" id="last" ng-model="lastName" placeholder="Enter last name">
+        <p>Your name is {{firstName+" "+lastName}}</p>
+        <p>{{6>5}}</p>
+        <p>Full name is {{fullName()}}</p>
+    </div>
+
+    <!-- ng-repeat practice -->
+    <br>
+    <h2>ng-repeat practice</h2>
+    <div ng-controller="ngrepeateCtrl">
+        <!-- redirect to another page -->
+        <button ng-click="redirectToAnotherPage()">Redirect to Another Page</button>
+        <button ng-click="gotoAnotherPage()">Redirect to next tab</button>
+
+        <!-- increase couter after click to button -->
+        <h3>couter to be increase :{{counter}}</h3>
+        <button ng-click="couterFunction()">click here to increase the couter</button>
+
+        <!-- Iterating over array -->
+        <h3>Array and objects iterating</h3>
+        <div>
+            <!-- {{arr}} -->
+            <ul>
+                <li ng-repeat="ele in arr">Index is{{$index}} and element is{{ele}}</li>
+            </ul>
+            <h3> objects iterating</h3>
+            <ul>
+                <li ng-repeat="item in obj">The items in object are {{item}}</li>
+            </ul>
+            <h3>creating function</h3>
+            <button ng-click="add(a,b)">add</button>
+           <p> The sum of {{a}} and {{b}} is {{result1}}</p>
+            <button ng-click="mul(a,b)">mul</button>
+            <p>The multpile of {{a}} and {{b}} is {{result2}}</p>
+            <button ng-click="sub(a,b)">sub</button>
+           <p> The subtraction of {{a}} and {{b}} is {{result3}}</p>
+            <button ng-click="div(a,b)">div</button>
+            <p>The division of {{a}} and {{b}} is {{result4}}</p>
+
+
+            <button ng-click="printHi()">Click me and check console</button>
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
